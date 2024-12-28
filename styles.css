@@ -1,0 +1,115 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Layout */
+main {
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.text {
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Bonus: Add a smooth transition for resizing */
+* {
+    transition: all 0.3s ease;
+}
